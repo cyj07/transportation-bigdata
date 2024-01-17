@@ -33,13 +33,13 @@
     "vite",
     "esm"
   ],
-  "homepage": "https://github.com/pure-admin/vue-pure-admin",
+  "homepage": "https://github.com/cyj07/transportation-bigdata/vue-pure-admin",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pure-admin/vue-pure-admin.git"
+    "url": "git+https://github.com/cyj07/transportation-bigdata/vue-pure-admin.git"
   },
   "bugs": {
-    "url": "https://github.com/pure-admin/vue-pure-admin/issues"
+    "url": "https://github.com/cyj07/transportation-bigdata/vue-pure-admin/issues"
   },
   "license": "ZZU",
   "author": {

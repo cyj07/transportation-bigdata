@@ -6,6 +6,7 @@ import PureTable from "./components/table/index.vue";
 import { ReNormalCountTo } from "@/components/ReCountTo";
 import { useRenderFlicker } from "@/components/ReFlicker";
 import { barChart, lineChart, roundChart } from "./components/chart";
+import pieChart from "../able/print/pieChart.vue";
 import Segmented, { type OptionsType } from "@/components/ReSegmented";
 import { chartData, barChartData, progressData, latestNewsData } from "./data";
 
@@ -76,7 +77,7 @@ const optionsBasis: Array<OptionsType> = [
                 :startVal="100"
                 :endVal="item.value"
               />
-              <p class="font-medium text-green-500">{{ item.percent }}</p>
+              <!-- <p class="font-medium text-green-500">{{ item.percent }}</p> -->
             </div>
             <lineChart
               v-if="item.data.length > 1"
@@ -109,12 +110,14 @@ const optionsBasis: Array<OptionsType> = [
         <el-card class="bar-card" shadow="never">
           <div class="flex justify-between">
             <span class="text-md font-medium">分析概览</span>
-            <Segmented v-model="curWeek" :options="optionsBasis" />
+            <!-- <Segmented v-model="curWeek" :options="optionsBasis" /> -->
           </div>
           <div class="flex justify-between items-start mt-3">
             <barChart
               :requireData="barChartData[curWeek].requireData"
               :questionData="barChartData[curWeek].questionData"
+              :sanData="barChartData[curWeek].sanData"
+              :siData="barChartData[curWeek].siData"
             />
           </div>
         </el-card>
@@ -137,33 +140,12 @@ const optionsBasis: Array<OptionsType> = [
           }
         }"
       >
+      
         <el-card shadow="never">
           <div class="flex justify-between">
-            <span class="text-md font-medium">解决概率</span>
+            <span class="text-md font-medium">各省份出行总量</span>
           </div>
-          <div
-            v-for="(item, index) in progressData"
-            :key="index"
-            :class="[
-              'flex',
-              'justify-between',
-              'items-start',
-              index === 0 ? 'mt-8' : 'mt-[2.15rem]'
-            ]"
-          >
-            <el-progress
-              :text-inside="true"
-              :percentage="item.percentage"
-              :stroke-width="21"
-              :color="item.color"
-              striped
-              striped-flow
-              :duration="item.duration"
-            />
-            <span class="text-nowrap ml-2 text-text_color_regular text-sm">
-              {{ item.week }}
-            </span>
-          </div>
+          <pieChart class="echart mt-[18px]" />
         </el-card>
       </re-col>
 

@@ -48,7 +48,7 @@ export function useColumns() {
       cellRenderer: () => {
         return (
           <a
-            href="https://github.com/pure-admin/vue-pure-admin"
+            href="https://github.com/cyj07/transportation-bigdata/vue-pure-admin"
             target="_blank"
           >
             <span style="color: var(--el-color-primary)">完整版代码链接</span>
@@ -62,7 +62,7 @@ export function useColumns() {
       cellRenderer: () => {
         return (
           <a
-            href="https://github.com/pure-admin/pure-admin-thin"
+            href="https://github.com/cyj07/transportation-bigdata/pure-admin-thin"
             target="_blank"
           >
             <span style="color: var(--el-color-primary)">精简版代码链接</span>

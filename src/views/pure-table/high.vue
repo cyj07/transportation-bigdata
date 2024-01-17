@@ -20,7 +20,7 @@ function tabClick({ index }) {
         <span class="font-medium">
           高级用法全部采用 tsx 语法，充分发挥
           <el-link
-            href="https://github.com/pure-admin/pure-admin-table"
+            href="https://github.com/cyj07/transportation-bigdata/pure-admin-table"
             target="_blank"
             style="margin: 0 4px 5px; font-size: 16px"
           >

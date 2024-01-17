@@ -29,7 +29,7 @@ function tabClick({ index }) {
           完全兼容 api 并提供灵活的配置项以及完善的类型提示，不用将代码都写在
           template 里了
           <el-link
-            href="https://github.com/pure-admin/pure-admin-table"
+            href="https://github.com/cyj07/transportation-bigdata/pure-admin-table"
             target="_blank"
             style="margin: 0 4px 5px; font-size: 16px"
           >

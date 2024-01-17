@@ -9,7 +9,7 @@ const TITLE = getConfig("Title");
     ZZU © 2024 
     <a
       class="ml-1 hover:text-primary"
-      href="https://github.com/pure-admin"
+      href="https://github.com/cyj07/transportation-bigdata"
       target="_blank"
     >
       {{ TITLE }}
