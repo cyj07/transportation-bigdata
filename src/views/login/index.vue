@@ -30,7 +30,9 @@ import { ReImageVerify } from "@/components/ReImageVerify";
 import { useRenderIcon } from "@/components/ReIcon/src/hooks";
 import { useTranslationLang } from "@/layout/hooks/useTranslationLang";
 import { useDataThemeChange } from "@/layout/hooks/useDataThemeChange";
-
+import { addPathMatch } from "@/router/utils";
+import { usePermissionStoreHook } from "@/store/modules/permission";
+import { setToken } from "@/utils/auth";
 import dayIcon from "@/assets/svg/day.svg?component";
 import darkIcon from "@/assets/svg/dark.svg?component";
 import globalization from "@/assets/svg/globalization.svg?component";
@@ -72,18 +74,28 @@ const onLogin = async (formEl: FormInstance | undefined) => {
   if (!formEl) return;
   await formEl.validate((valid, fields) => {
     if (valid) {
-      useUserStoreHook()
-        .loginByUsername({ username: ruleForm.username, password: "admin123" })
-        .then(res => {
-          if (res.success) {
-            // 获取后端路由
-            return initRouter().then(() => {
-              router.push(getTopMenu(true).path);
-              message("登录成功", { type: "success" });
-            });
-          }
-        })
-        .finally(() => (loading.value = false));
+      setToken({
+        username: "admin",
+        roles: ["admin"],
+        accessToken: "eyJhbGciOiJIUzUxMiJ9.admin"
+      } as any);
+      // 全部采取静态路由模式
+      usePermissionStoreHook().handleWholeMenus([]);
+      addPathMatch();
+      router.push("/");
+      message("登录成功", { type: "success" });
+      // useUserStoreHook()
+      //   .loginByUsername({ username: ruleForm.username, password: "admin123" })
+      //   .then(res => {
+      //     if (res.success) {
+      //       // 获取后端路由
+      //       return initRouter().then(() => {
+      //         router.push(getTopMenu(true).path);
+      //         message("登录成功", { type: "success" });
+      //       });
+      //     }
+      //   })
+      //   .finally(() => (loading.value = false));
     } else {
       loading.value = false;
       return fields;

@@ -110,6 +110,8 @@ menus:
   hsdanmaku: 弹幕
   hsPureTableBase: 基础用法（23个示例）
   hsPureTableHigh: 高级用法（11个示例）
+  hsanalys: 分析
+  hstuijian: 路径推荐
   hsboard: 艺术画板
   hsMenuoverflow: 目录超出显示 Tooltip 文字提示
   hsChildMenuoverflow: 菜单超出显示 Tooltip 文字提示

@@ -36,22 +36,6 @@ export default {
       }
     },
     {
-      path: "/components/animatecss",
-      name: "AnimateCss",
-      component: () => import("@/views/components/animatecss.vue"),
-      meta: {
-        title: $t("menus.hsanimatecss")
-      }
-    },
-    {
-      path: "/components/cropping",
-      name: "Cropping",
-      component: () => import("@/views/components/cropping/index.vue"),
-      meta: {
-        title: $t("menus.hscropping")
-      }
-    },
-    {
       path: "/components/segmented",
       name: "Segmented",
       component: () => import("@/views/components/segmented.vue"),
@@ -66,38 +50,6 @@ export default {
       component: () => import("@/views/components/cascader.vue"),
       meta: {
         title: $t("menus.hsCascader")
-      }
-    },
-    {
-      path: "/components/selector",
-      name: "Selector",
-      component: () => import("@/views/components/selector.vue"),
-      meta: {
-        title: $t("menus.hsselector")
-      }
-    },
-    {
-      path: "/components/waterfall",
-      name: "Waterfall",
-      component: () => import("@/views/components/waterfall/index.vue"),
-      meta: {
-        title: $t("menus.hswaterfall")
-      }
-    },
-    {
-      path: "/components/splitPane",
-      name: "SplitPane",
-      component: () => import("@/views/components/split-pane.vue"),
-      meta: {
-        title: $t("menus.hssplitPane")
-      }
-    },
-    {
-      path: "/components/swiper",
-      name: "Swiper",
-      component: () => import("@/views/components/swiper.vue"),
-      meta: {
-        title: $t("menus.hsSwiper")
       }
     },
     {
@@ -125,27 +77,11 @@ export default {
       }
     },
     {
-      path: "/components/json-editor",
-      name: "JsonEditor",
-      component: () => import("@/views/components/json-editor.vue"),
-      meta: {
-        title: $t("menus.hsjsoneditor")
-      }
-    },
-    {
       path: "/components/seamlessScroll",
       name: "SeamlessScroll",
       component: () => import("@/views/components/seamless-scroll.vue"),
       meta: {
         title: $t("menus.hsseamless")
-      }
-    },
-    {
-      path: "/components/virtualList",
-      name: "VirtualList",
-      component: () => import("@/views/components/virtual-list/index.vue"),
-      meta: {
-        title: $t("menus.hsVirtualList")
       }
     },
     {
