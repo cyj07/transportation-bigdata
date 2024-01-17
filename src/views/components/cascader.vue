@@ -24,10 +24,10 @@ const handleChange = value => {
 </script>
 
 <template>
-  <el-card shadow="never">
-    <template #header> <p class="font-medium">区域级联选择器</p> </template>
+  <!-- <el-card shadow="never"> -->
+    <!-- <template #header> <p class="font-medium">区域级联选择器</p> </template> -->
     <el-row :gutter="24">
-      <el-col :xl="12" :lg="12" :md="24" :sm="24" :xs="24">
+      <!-- <el-col :xl="12" :lg="12" :md="24" :sm="24" :xs="24">
         <div class="flex flex-col items-center justify-center mt-3">
           <span class="text-[var(--el-color-primary)]">
             2. 二级联动（带有“全部”选项）
@@ -55,18 +55,18 @@ const handleChange = value => {
             </div>
           </div>
         </div>
-      </el-col>
+      </el-col> -->
       <el-col :xl="12" :lg="12" :md="24" :sm="24" :xs="24">
         <div class="flex flex-col items-center justify-center mt-3">
           <span class="text-[var(--el-color-primary)]">
-            4. 三级联动（带"全部选项"）
+            区域选择：
             <el-cascader
               v-model="selectedOptions4"
               :options="regionDataPlus"
               @change="handleChange"
             />
           </span>
-          <div class="leading-10">
+          <!-- <div class="leading-10">
             <div>绑定值：{{ selectedOptions4 }}</div>
             <div>
               区域码转汉字：
@@ -84,9 +84,10 @@ const handleChange = value => {
                 )
               }}
             </div>
-          </div>
+          </div> -->
         </div>
       </el-col>
+
     </el-row>
-  </el-card>
+  <!-- </el-card> -->
 </template>
