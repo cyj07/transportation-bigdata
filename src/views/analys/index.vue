@@ -60,6 +60,7 @@ const handleChange = value => {
 </script>
 
 <template>
+  <div>
   <el-card shadow="never">
     <el-row :gutter="24" justify="space-around">
       <re-col
@@ -204,6 +205,7 @@ const handleChange = value => {
         </re-col>
     </el-row>
   </el-card>
+  </div>
 </template>
 
 <style lang="scss" scoped>

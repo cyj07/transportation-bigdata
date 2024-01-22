@@ -25,9 +25,9 @@ setOptions({
       {
          name: "热点区域",
          type: "pie",
-         top: "22%",
+         top: "5%",
          radius: "75%",
-         center: ["46%", "46%"],
+         center: ["50%", "50%"],
          color: ["#e6a23c", "#f56c6c", "#53a7ff", '#26ce83', '#7846e5', '#d1392b'],
          data: chartData
       }

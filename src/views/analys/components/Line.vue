@@ -42,6 +42,10 @@ const { setOptions } = useECharts(chartRef, {
 
 setOptions({
    container: ".line-card",
+   tooltip: {
+      trigger: 'axis'
+   },
+   animationDuration: 1000,
    xAxis: {
       type: "category",
       show: true,
@@ -54,7 +58,8 @@ setOptions({
       top: "15%",
       bottom: "10%",
       left: "15%",
-      right: "10%"
+      right: "10%",
+      containLabel: true
    },
    yAxis: {
       show: true,
@@ -144,5 +149,5 @@ setOptions({
 </script>
 
 <template>
-   <div ref="chartRef" style="width: 1200px; height: 340px" />
+   <div ref="chartRef" style="width: 1200px; height: 380px" />
 </template>

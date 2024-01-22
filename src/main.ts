@@ -1,5 +1,6 @@
 import App from "./App.vue";
 import router from "./router";
+import QgsMapCanvas from './vue-qgis/src/components/QgsMapCanvas.vue'; // 
 import { setupStore } from "@/store";
 import { useI18n } from "@/plugins/i18n";
 import { getPlatformConfig } from "./config";
