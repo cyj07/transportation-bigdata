@@ -6,7 +6,7 @@ import PureTable from "./components/table/index.vue";
 import { ReNormalCountTo } from "@/components/ReCountTo";
 import { useRenderFlicker } from "@/components/ReFlicker";
 import lineChart from "./components/Line.vue";
-import pieChart from "@/views/components/able/print/pieChart.vue";
+// import pieChart from "@/views/components/able/print/pieChart.vue";
 import Segmented, { type OptionsType } from "@/components/ReSegmented";
 import redian from "./redian.vue"
 import { latestNewsData } from "./data"

@@ -5,7 +5,7 @@
 </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import 'ol/ol.css'
 import TileLayer from 'ol/layer/Tile'
 import XYZ from 'ol/source/XYZ'
@@ -16,15 +16,22 @@ import { Point as olPoint } from 'ol/geom'
 import { fromLonLat, transform } from 'ol/proj'
 import { Style, Fill, Icon, Text } from 'ol/style'
 import { onMounted, reactive, ref } from 'vue'
-import { guiji } from "./data";
+
 
 let zuida = 10
+const props = defineProps({
+guiji: {
+   type: Array as PropType<Array<number>>,
+   default: () => []
+}
+});
 const mapView = reactive({
-center: fromLonLat([120.408403, 36.471426]), // 地图中心点
+center: fromLonLat(props.guiji[0].long), // 地图中心点
 zoom: 9, // 初始缩放级别
 minZoom: 7, // 最小缩放级别
 maxZoom: zuida // 最大缩放级别
 })
+
 let map = ref(null)
 // 弹框
 const overlay = ref(null)
@@ -49,7 +56,7 @@ target: mapCom.value
 })
 
 // 循环将每个人都添加在地图上
-guiji.forEach((v) => {
+props.guiji.forEach((v) => {
 addLayer(v)
 })
 
