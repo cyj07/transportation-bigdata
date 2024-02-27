@@ -13,7 +13,7 @@ import GuiJiK from "../guiji/index.vue";
 const { loading, columns, pagination, Empty, onCurrentChange } =
   useColumns();
 const lineRef = ref();
-let detailData = ref<any>(guiji)
+let detailData = ref<any>([]);
 const show = ref(false)
 const props = defineProps({
 dataList: {
@@ -147,7 +147,7 @@ showOverflowTooltip
   <re-col
     v-motion
     class="mb-[18px]"
-    :value="6"
+    :value="4"
     :xs="24"
     :initial="{
       opacity: 0,
@@ -163,8 +163,9 @@ showOverflowTooltip
   >
     <el-card shadow="never">
       <div class="flex justify-between">
-        <span class="text-md font-medium">{{detailData[0].cph}}行程</span>
+          <span class="text-md font-medium">出行链行程</span>   
       </div>
+
       <el-scrollbar max-height="504" class="mt-3">
         <el-timeline>
           <el-timeline-item
@@ -194,7 +195,9 @@ showOverflowTooltip
                 }}
               </p>
           </el-timeline-item>
+          
         </el-timeline>
+        
       </el-scrollbar>
     </el-card>
   </re-col>
@@ -214,11 +217,6 @@ line-height: 28px;
 }
 .dc-container{
 text-align: right;
-}
-.el-dialog {
-// 设置弹出层的最大高度
-max-height: calc(100vh - 60px);
-
 }
 }
 </style>

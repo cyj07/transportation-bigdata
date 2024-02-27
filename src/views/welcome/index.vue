@@ -25,12 +25,6 @@ label: "上周"
 label: "本周"
 }
 ];
-methods: {
-  function fanChuan(data) {
-    debugger
-    detailData = data; // 接收子组件传递的数据
-  }
-}
 </script>
 
 <template>
@@ -178,59 +172,9 @@ methods: {
       <div class="flex justify-between">
         <span class="text-md font-medium">出行链列表</span>
       </div>
-      <PureTable class="mt-3" :dataList="tableData" v-on:fanChuan="fanChuan"/>
+      <PureTable class="mt-3" :dataList="tableData"/>
     </el-card>
   </re-col>
-
-  <!-- <re-col
-    v-motion
-    class="mb-[18px]"
-    :value="6"
-    :xs="24"
-    :initial="{
-      opacity: 0,
-      y: 100
-    }"
-    :enter="{
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: 640
-      }
-    }"
-  >
-    <el-card shadow="never">
-      <div class="flex justify-between">
-        <span class="text-md font-medium">最新动态</span>
-      </div>
-      <el-scrollbar max-height="504" class="mt-3">
-        <el-timeline>
-          <el-timeline-item
-            v-for="(item, index) in latestNewsData"
-            :key="index"
-            center
-            placement="top"
-            :icon="
-              markRaw(
-                useRenderFlicker({
-                  background: randomGradient({
-                    randomizeHue: true
-                  })
-                })
-              )
-            "
-            :timestamp="item.date"
-          >
-            <p class="text-text_color_regular text-sm">
-              {{
-                `新增 ${item.requiredNumber} 条问题，${item.resolveNumber} 条已解决`
-              }}
-            </p>
-          </el-timeline-item>
-        </el-timeline>
-      </el-scrollbar>
-    </el-card>
-  </re-col> -->
 </el-row>
 </div>
 </template>
