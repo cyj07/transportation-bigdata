@@ -8,7 +8,9 @@ import { useRenderFlicker } from "@/components/ReFlicker";
 import { barChart, lineChart, roundChart } from "./components/chart";
 import pieChart from "../able/print/pieChart.vue";
 import Segmented, { type OptionsType } from "@/components/ReSegmented";
-import { chartData, barChartData, progressData, tableData, latestNewsData } from "./data";
+import { chartData, barChartData, progressData , latestNewsData } from "./data";
+// todo
+import tableData from '@/data/liebiao.json';
 
 defineOptions({
 name: "Welcome"

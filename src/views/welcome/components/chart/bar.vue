@@ -49,7 +49,7 @@ watch(
         right: 0
       },
       legend: {
-        data: ["需求人数", "提问数量",'第三个','第四个'],
+        data: ["车辆总流量", "出行链总量",'车辆数量','用户满意度'],
         textStyle: {
           color: "#606266",
           fontSize: "0.875rem"
@@ -82,7 +82,7 @@ watch(
       ],
       series: [
         {
-          name: "需求人数",
+          name: "车辆总流量",
           type: "bar",
           barWidth: 12,
           itemStyle: {
@@ -92,7 +92,7 @@ watch(
           data: props.requireData
         },
         {
-          name: "提问数量",
+          name: "出行链总量",
           type: "bar",
           barWidth: 12,
           itemStyle: {
@@ -102,7 +102,7 @@ watch(
           data: props.questionData
         },
         {
-          name: "第三个",
+          name: "车辆数量",
           type: "bar",
           barWidth: 12,
           itemStyle: {
@@ -110,17 +110,17 @@ watch(
             borderRadius: [10, 10, 0, 0]
           },
           data: props.sanData
-        },
-        {
-          name: "第四个",
-          type: "bar",
-          barWidth: 12,
-          itemStyle: {
-            color: "#7846e5",
-            borderRadius: [10, 10, 0, 0]
-          },
-          data: props.siData
         }
+        // {
+        //   name: "用户满意度",
+        //   type: "bar",
+        //   barWidth: 12,
+        //   itemStyle: {
+        //     color: "#7846e5",
+        //     borderRadius: [10, 10, 0, 0]
+        //   },
+        //   data: props.siData
+        // }
       ]
     });
   },

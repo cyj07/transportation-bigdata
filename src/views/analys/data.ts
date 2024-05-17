@@ -1,5 +1,5 @@
 const chartData = [
-   { value: 400, name: "安徽省" },
+   { value: 400, name: " 其他 " },
    { value: 1600, name: "河南省" },
    { value: 720, name: "浙江省" },
    { value: 400, name: "山东省" },

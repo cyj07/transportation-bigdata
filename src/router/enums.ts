@@ -7,8 +7,8 @@ const home = 0, // 平台规定只有 home 路由的 rank 才能为 0 ，所以�
   analys = 1,
   tuijian = 2,
   permission = 9,
-  system = 10,
-  tabs = 11;
+  system = 10
+  // tabs = 11;
 
 export {
   home,
@@ -18,6 +18,6 @@ export {
   analys,
   tuijian,
   permission,
-  system,
-  tabs
+  system
+  // tabs
 };

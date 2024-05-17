@@ -27,14 +27,15 @@ setOptions({
       top: "22%",
       radius: "75%",
       center: ["46%", "46%"],
-      color: ["#e6a23c", "#f56c6c", "#53a7ff",'#26ce83','#7846e5','#d1392b'],
+      color: [ "#f56c6c", "#53a7ff",'#26ce83','#7846e5','#d1392b', "gray"],
       data: [
-        { value: 400, name: "安徽省" },
+        
         { value: 1600, name: "河南省" },
         { value: 720, name: "浙江省" },
         { value: 400, name: "山东省" },
         { value: 1200, name: "江苏省" },
-        { value: 2200, name: "山西省" }
+        { value: 2200, name: "山西省" },
+        { value: 400, name: " 其他 " }
       ]
     }
   ]
